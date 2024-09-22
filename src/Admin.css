@@ -1,0 +1,163 @@
+/* Admin.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    /* Light background color for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    /* White background for the form */
+    animation: fadeIn 0.5s ease;
+    /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    /* Increased font size for the heading */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+    margin-right: 20px;
+    /* Slightly darker for better readability */
+}
+
+input[type="text"],
+input[type="datetime-local"],
+input[type="url"],
+textarea {
+    padding: 12px;
+    /* Increased padding for comfort */
+    margin-bottom: 20px;
+    /* More spacing between fields */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="datetime-local"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+    border-color: #007BFF;
+    /* Bootstrap primary blue */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Glow effect on focus */
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+    /* Allow vertical resizing */
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    /* Bootstrap primary blue */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.gotoHome {
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    margin-left: 40%;
+    /* Bootstrap primary blue */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.gotoHome:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+    transform: scale(1.05);
+}
+
+button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+    /* Scale down on click */
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: center;
+    /* Centered error messages */
+}
+
+/* Add a media query for responsive design */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        /* Reduce margin on smaller screens */
+        padding: 15px;
+        /* Adjust padding for smaller screens */
+    }
+
+    h2 {
+        font-size: 20px;
+        /* Decrease heading size for smaller screens */
+    }
+
+    input[type="text"],
+    input[type="datetime-local"],
+    input[type="url"],
+    textarea {
+        font-size: 14px;
+        /* Smaller font size for inputs */
+    }
+
+    button {
+        font-size: 14px;
+        /* Smaller button font size */
+    }
+}
